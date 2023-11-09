@@ -1,23 +1,24 @@
-window.onload = function() {
 const canvas = document.querySelector("canvas")
 const context = canvas.getContext("2d")
-}
+
 canvas.width = window.innerWidth
 canvas.height = window.innerHeight
 
 
 // map();
+let newMap = new Image();
+newMap.src = 'MainMenuMap/lowpolyslope map.PNG';
 
-function drawImage() {
-        const mainMap = document.getElementById("MainMenuMap");
-        context.drawImage(mainMap, 10, 10);
+function drawImage(src, x, y, w, h) {
+        // const mainMap = document.getElementById("MainMenuMap");
+        context.drawImage(src, x, y, w, h);
       };
 
 
 
 // delcares and defines variables for the position x and y, as well as the distance x left/x right and y Up/ y Down  of the character
-let posX = 0;
-let posY = 0;
+let posX = 425;
+let posY = 425;
 let disXL = 0;
 let disXR = 0;
 let disYUp = 0;
@@ -94,13 +95,18 @@ class Player {
         }
     }
 }
+
+// Create players
+const player1 = new Player("Player 1", 100);
+const player2 = new Player("Player 2", 100);
+const player3 = new Player("Player 3", 100);
  
 
 //   Class representing the game.
  
-class BattleRoyaleGame {
+class Game {
 
-//  Constructor for the BattleRoyaleGame class.
+//  Constructor for the Game class.
 
     constructor(players) {
         this.players = players;
@@ -123,15 +129,8 @@ class BattleRoyaleGame {
     }
 }
  
-// Usage Example for Battle Royale Game
- 
-// Create players
-const player1 = new Player("Player 1", 100);
-const player2 = new Player("Player 2", 100);
-const player3 = new Player("Player 3", 100);
- 
 // Create game with players
-const game = new BattleRoyaleGame([player1, player2, player3]);
+const game = new Game([player1, player2, player3]);
  
 // Start the game
 game.startGame();
