@@ -1,17 +1,18 @@
-
+window.onload = function() {
 const canvas = document.querySelector("canvas")
 const context = canvas.getContext("2d")
-
-map();
-
-function map()
-{
-  mapImg = new Image();
-  mapImg.src = "MainMenuMap/lowpolyslope map.PNG";
-  mapImg.onload = function(){
-    context.drawImage(mapImg, 1000, 1000);
-  }
 }
+canvas.width = window.innerWidth
+canvas.height = window.innerHeight
+
+
+// map();
+
+function drawImage() {
+        const mainMap = document.getElementById("MainMenuMap");
+        context.drawImage(mainMap, 10, 10);
+      };
+
 
 
 // delcares and defines variables for the position x and y, as well as the distance x left/x right and y Up/ y Down  of the character
@@ -37,34 +38,21 @@ function move(){
 //calls movement function
 move()
 
-/// sets value to disX and disY for W.A.S.D. movement keys when pressed down 
+
+///// START OF KEYBINDS //////
+
+
 
 addEventListener("keydown", (evt) => {
-    if (evt.code == `KeyW`){ disYUp = -2; }
-    if (evt.code == `KeyA`){ disXL = -2; }
-    if (evt.code == `KeyS`){ disYDown = 2; }
-    if (evt.code == `KeyD`){ disXR = 2; }
+    /// sets value to disXL/disXR and disYUp/disYDown for W.A.S.D. movement keys when pressed down 
+    if (evt.code == `KeyW`){ disYUp = -5; }
+    if (evt.code == `KeyA`){ disXL = -5; }
+    if (evt.code == `KeyS`){ disYDown = 5; }
+    if (evt.code == `KeyD`){ disXR = 5; }
+    /// sets value to (key name here) keys when pressed down 
 })
 
-// addEventListener("keydown", (evt) => {
-//     if (evt.code == `KeyA`){
-//         disX = -2;
-//     }
-// })
-
-// addEventListener("keydown", (evt) => {
-//     if (evt.code == `KeyS`){
-//         disY = 2;
-//     }
-// })
-
-// addEventListener("keydown", (evt) => {
-//     if (evt.code == `KeyD`){
-//         disX = 2;
-//     }
-// })
-
-/// set value back for disX and disY back to 0 for W.A.S.D. movement keys when key is released
+/// set value back for disXL/disXR and disYUp/disYDown back to 0 for W.A.S.D. movement keys when key is released
 
 addEventListener("keyup", (evt) => {
     if (evt.code == `KeyW`){ disYUp = 0; }
@@ -74,29 +62,9 @@ addEventListener("keyup", (evt) => {
 })
 
 
-// addEventListener("keyup", (evt) => {
-//     if (evt.code == `KeyW`){
-//         disY = 0;
-//     }
-// })
 
-// addEventListener("keyup", (evt) => {
-//     if (evt.code == `KeyA`){
-//         disX = 0;
-//     }
-// })
+//// END OF KEYBINDS////
 
-// addEventListener("keyup", (evt) => {
-//     if (evt.code == `KeyS`){
-//         disY = 0;
-//     }
-// })
-
-// addEventListener("keyup", (evt) => {
-//     if (evt.code == `KeyD`){
-//         disX = 0;
-//     }
-// })
 
 //  Class representing a Player in the game
  
