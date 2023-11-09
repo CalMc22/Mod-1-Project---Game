@@ -14,19 +14,23 @@ function map()
 }
 
 
-// delcares and defines variables for the position x and y, as well as the distance x and y of the character
+// delcares and defines variables for the position x and y, as well as the distance x left/x right and y Up/ y Down  of the character
 let posX = 0;
 let posY = 0;
-let disX = 0;
-let disY = 0;
+let disXL = 0;
+let disXR = 0;
+let disYUp = 0;
+let disYDown = 0;
 
 //creates function for movement ( 25 25 is size of box )
 function move(){
     context.clearRect(0, 0, canvas.width, canvas.height)
     context.fillRect(posX, posY, 25, 25)
     // makes iterates the position by the distance you want to move and updates it
-    posX += disX
-    posY += disY 
+    posX += disXR
+    posX +=disXL
+    posY += disYUp
+    posY += disYDown
     // updates movement every frame
     requestAnimationFrame(move)
 }
@@ -36,54 +40,63 @@ move()
 /// sets value to disX and disY for W.A.S.D. movement keys when pressed down 
 
 addEventListener("keydown", (evt) => {
-    if (evt.code == `KeyW`){
-        disY = -1.9;
-    }
+    if (evt.code == `KeyW`){ disYUp = -2; }
+    if (evt.code == `KeyA`){ disXL = -2; }
+    if (evt.code == `KeyS`){ disYDown = 2; }
+    if (evt.code == `KeyD`){ disXR = 2; }
 })
 
-addEventListener("keydown", (evt) => {
-    if (evt.code == `KeyA`){
-        disX = -2;
-    }
-})
+// addEventListener("keydown", (evt) => {
+//     if (evt.code == `KeyA`){
+//         disX = -2;
+//     }
+// })
 
-addEventListener("keydown", (evt) => {
-    if (evt.code == `KeyS`){
-        disY = 2;
-    }
-})
+// addEventListener("keydown", (evt) => {
+//     if (evt.code == `KeyS`){
+//         disY = 2;
+//     }
+// })
 
-addEventListener("keydown", (evt) => {
-    if (evt.code == `KeyD`){
-        disX = 2;
-    }
-})
+// addEventListener("keydown", (evt) => {
+//     if (evt.code == `KeyD`){
+//         disX = 2;
+//     }
+// })
 
 /// set value back for disX and disY back to 0 for W.A.S.D. movement keys when key is released
 
 addEventListener("keyup", (evt) => {
-    if (evt.code == `KeyW`){
-        disY = 0;
-    }
+    if (evt.code == `KeyW`){ disYUp = 0; }
+    if (evt.code == `KeyA`){ disXL = 0; }
+    if (evt.code == `KeyS`){ disYDown = 0; }
+    if (evt.code == `KeyD`){ disXR = 0; }
 })
 
-addEventListener("keyup", (evt) => {
-    if (evt.code == `KeyA`){
-        disX = 0;
-    }
-})
 
-addEventListener("keyup", (evt) => {
-    if (evt.code == `KeyS`){
-        disY = 0;
-    }
-})
+// addEventListener("keyup", (evt) => {
+//     if (evt.code == `KeyW`){
+//         disY = 0;
+//     }
+// })
 
-addEventListener("keyup", (evt) => {
-    if (evt.code == `KeyD`){
-        disX = 0;
-    }
-})
+// addEventListener("keyup", (evt) => {
+//     if (evt.code == `KeyA`){
+//         disX = 0;
+//     }
+// })
+
+// addEventListener("keyup", (evt) => {
+//     if (evt.code == `KeyS`){
+//         disY = 0;
+//     }
+// })
+
+// addEventListener("keyup", (evt) => {
+//     if (evt.code == `KeyD`){
+//         disX = 0;
+//     }
+// })
 
 //  Class representing a Player in the game
  
