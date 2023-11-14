@@ -1,11 +1,4 @@
 body {
-    margin-left: 200;
-    margin-right: 200;
-    margin-top: 0;
-    margin-bottom: 0;
     background-color: slateblue;
 }
 
-canvas { 
-    border: 2px solid black;
-}
