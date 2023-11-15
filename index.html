@@ -4,9 +4,44 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="styles.css">
-    <script src="script.js" type="module" defer></script>
+    <script src="script.js" defer></script>
 </head>
 <body>
-    
+
+    <div class="container">
+      <img src="pokemongrass.png" alt="">
+      <audio src=""></audio>
+        <div class="title">Type Battle</div>
+          <!--Display Score of player and computer -->
+          <div class="score">   
+            <div class="playerScore"> 
+                <h2 class="trainer">Your Trainer</h2> 
+                <p class="p-count count">0</p> 
+  
+            </div>        
+            <div class="computerScore"> 
+                <h2 class="cpu">Enemy Trainer</h2> 
+                <p class="c-count count">0</p> 
+            </div> 
+        </div> 
+      
+        <div class="move">Choose your type!</div> 
+          
+          <!--Number of moves left before game ends -->
+        <div class="movesleft">Moves Left: 6 </div> 
+          
+          <!--Options available to player to play game -->
+        <div class="options"> 
+            <button class="grass">Grass</button> 
+            <button class="fire">Fire</button> 
+            <button class="water">Water</button>     
+        </div> 
+          
+          <!--Final result -->
+        <div class="result"></div> 
+          
+          <!-- restart -->
+        <button class="restart"></button> 
+    </div>
 </body>
 </html>

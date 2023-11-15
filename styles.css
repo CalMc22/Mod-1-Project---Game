@@ -1,4 +1,113 @@
-body {
-    background-color: slateblue;
+body{
+    margin: 0;
+    display: flex;
 }
 
+.container{ 
+    padding: 0; 
+    margin: 0; 
+    box-sizing: border-box;
+    background: rgb(255,0,0);
+    background: linear-gradient(180deg, rgba(255,0,0,1) 0%, rgba(0,0,0,1) 50%, rgba(255,255,255,1) 100%);
+    color: #fff; 
+    display: flex; 
+    flex-direction: column; 
+    height: 100vh; 
+    width: 100vw; 
+    justify-content: center; 
+    align-items: center; 
+} 
+
+img {
+    border: 10px solid black;
+    zoom: 100%;
+}
+
+/* Title of the game */
+.title{ 
+    position: absolute;
+    top: 0;
+    font-size: 70px; 
+    z-index: 2; 
+} 
+  
+
+/* Score Board */
+.score{ 
+    display: flex; 
+    width: 50vh; 
+    justify-content: space-evenly; 
+    position: absolute;  
+    z-index: 1; 
+} 
+
+.trainer {
+    margin-right: 100px;
+    margin-top: 0px;
+}
+
+.playerscore {
+   border: 3px solid black;
+   border-radius: 5px;
+   background-color: bisque;
+   margin-right: 150px;
+
+}
+  
+/* Score  */
+.p-count,.c-count{ 
+    text-align: center; 
+    font-size: 50px; 
+    margin-top: 15px; 
+} 
+  
+/* displaying three buttons in one line */
+.options{ 
+    display: flex; 
+    width: 50vw; 
+    justify-content: space-evenly; 
+    margin-top: 2rem; 
+} 
+  
+/* Styling on all three buttons */
+.grass { 
+    padding: 10px; 
+    width: 100px; 
+    border-radius: 10px; 
+    background: green; 
+} 
+
+.fire {
+    padding: 10px; 
+    width: 100px; 
+    border-radius: 10px; 
+    background: orangered; 
+} 
+
+.water {
+    padding: 10px; 
+    width: 100px; 
+    border-radius: 10px; 
+    background: lightskyblue; 
+}
+
+  
+.move{ 
+    font-size: 2rem; 
+    font-weight: bold; 
+} 
+  
+/* Reload button style */
+.restart { 
+    display: none; 
+    margin-top: 2rem; 
+    padding: 1rem; 
+    background: rgb(255,0,0);
+    background: linear-gradient(180deg, rgba(255,0,0,1) 0%, rgba(0,0,0,1) 50%, rgba(255,255,255,1) 100%);
+    border-radius: 10px;
+} 
+
+.result{ 
+    margin-top: 20px; 
+    font-size: 20px; 
+}
