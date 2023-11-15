@@ -49,7 +49,7 @@ const game = () => {
         } 
         else if(player == 'grass'){ 
             if(computer == 'fire'){ 
-                result.textContent = `Computer's grass type beat your water type... you suck`; 
+                result.textContent = `Computer's fire type beat your grass type... you suck`; 
                 computerScore++; 
                 computerScoreBoard.textContent = computerScore; 
   
@@ -83,12 +83,13 @@ const game = () => {
         } 
     } 
   
+
     // Function to run when game is over 
     const gameOver = (playerOptions,movesLeft) => { 
   
         const chooseMove = document.querySelector('.move'); 
         const result = document.querySelector('.result'); 
-        const restartBtn = document.querySelector('.restart'); 
+        const restartBtn = document.querySelector('.restart');
   
         playerOptions.forEach(option => { 
             option.style.display = 'none'; 
@@ -99,8 +100,10 @@ const game = () => {
   
         if(playerScore > computerScore){ 
             result.style.fontSize = '2rem'; 
-            result.innerText = 'You Won The Game'
-            result.style.color = 'skyblue'; 
+            result.innerText = 'You Won The Game';
+            result.style.color = 'skyblue';
+            victorySong.play;
+            
         } 
         else if(playerScore < computerScore){ 
             result.style.fontSize = '2rem'; 
@@ -128,3 +131,16 @@ const game = () => {
   
 // Calling the game function 
 game();
+
+const battleMusic = document.querySelector(".battleMusic");
+const victoryMusic = document.querySelector(".victoryMusic");
+
+window.addEventListener("DOMContentLoaded", (evt) => {
+    battleMusic.volume = 0.09;
+    battleMusic.play();
+    battleMusic.loop = true;
+  });
+
+document.querySelector(".battleMusicBtn").addEventListener("click", (evt) => {
+    battleMusic.stop();
+})
