@@ -90,6 +90,7 @@ const game = () => {
         const chooseMove = document.querySelector('.move'); 
         const result = document.querySelector('.result'); 
         const restartBtn = document.querySelector('.restart');
+        const victorySong = document.querySelector('.victoryMusic')
   
         playerOptions.forEach(option => { 
             option.style.display = 'none'; 
@@ -102,7 +103,8 @@ const game = () => {
             result.style.fontSize = '2rem'; 
             result.innerText = 'You Won The Game';
             result.style.color = 'skyblue';
-            victorySong.play;
+            // victorySong.volume = 0.2;
+            // victorySong.play();
             
         } 
         else if(playerScore < computerScore){ 
@@ -123,7 +125,25 @@ const game = () => {
         }) 
     } 
   
+    const battleMusic = document.querySelector(".battleMusic");
+    const victoryMusic = document.querySelector(".victoryMusic");
+    const pauseMusic = document.querySelector(".battleMusicBtn")
   
+    window.addEventListener("DOMContentLoaded", () => {
+        battleMusic.volume = 0.09;
+        battleMusic.play()
+      });
+    
+    pauseMusic.addEventListener("click", () => {
+        if (battleMusic.paused) {
+          battleMusic.volume = 0.09;
+          battleMusic.play();
+          
+        } else {
+          battleMusic.pause();
+        }
+      });
+
     // Calling playGame function inside game 
     playGame(); 
       
@@ -132,15 +152,3 @@ const game = () => {
 // Calling the game function 
 game();
 
-const battleMusic = document.querySelector(".battleMusic");
-const victoryMusic = document.querySelector(".victoryMusic");
-
-window.addEventListener("DOMContentLoaded", (evt) => {
-    battleMusic.volume = 0.09;
-    battleMusic.play();
-    battleMusic.loop = true;
-  });
-
-document.querySelector(".battleMusicBtn").addEventListener("click", (evt) => {
-    battleMusic.stop();
-})
