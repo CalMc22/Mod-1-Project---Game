@@ -1,6 +1,5 @@
 body{
     margin: 0;
-    display: flex;
 }
 
 .container{ 
@@ -22,29 +21,17 @@ body{
 .title{ 
     position: absolute;
     top: 0;
-    margin-bottom: 20px;
     font-size: 70px; 
-    z-index: 2; 
-} 
-  
-
-/* Score Board */
-.score { 
-    display: flex; 
-    width: 50vh;
-    height: 50vh;
-    justify-content: space-evenly; 
-    position: absolute;  
-    z-index: 1;
 } 
 
 
+/* styles for your trainer and cpu trainer */
 .trainer, .cpu {
     border: 3px solid black;
     border-radius: 10px;
     background-color: blue;
     color: white;
-    padding: 10px
+    padding: 10px;
 }
 
 .trainer {
@@ -53,11 +40,6 @@ body{
 
 .cpu{
     background-color: darkred;
-}
-
-.playerscore {
-    border: 10px soild black;
-    border-radius: 5px;
 }
   
 /* styles for the score number  */
