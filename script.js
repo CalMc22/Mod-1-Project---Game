@@ -53,7 +53,7 @@ const game = () => {
                 computerScore++; 
                 computerScoreBoard.textContent = computerScore; 
   
-            }else{ 
+            }else if (computer == 'water'){ 
                 result.textContent = 'Player Won'
                 playerScore++; 
                 playerScoreBoard.textContent = playerScore; 
@@ -64,7 +64,7 @@ const game = () => {
                 result.textContent = `Computer's grass type beat your water type... you suck`; 
                 computerScore++; 
                 computerScoreBoard.textContent = computerScore; 
-            }else{ 
+            }else if (computer == 'fire'){ 
                 result.textContent = 'Player Won'; 
                 playerScore++; 
                 playerScoreBoard.textContent = playerScore; 
@@ -75,7 +75,7 @@ const game = () => {
                 result.textContent = `Computer's water type beat your fire type... you suck`; 
                 computerScore++; 
                 computerScoreBoard.textContent = computerScore; 
-            }else{ 
+            }else if (computer == 'grass'){ 
                 result.textContent = 'Player Won'; 
                 playerScore++; 
                 playerScoreBoard.textContent = playerScore; 
@@ -103,8 +103,8 @@ const game = () => {
             result.style.fontSize = '2rem'; 
             result.innerText = 'You Won The Game';
             result.style.color = 'skyblue';
-            // victorySong.volume = 0.2;
-            // victorySong.play();
+            victorySong.volume = 0.2;
+            victorySong.play();
             
         } 
         else if(playerScore < computerScore){ 
@@ -112,7 +112,7 @@ const game = () => {
             result.innerText = 'You Lost The Game'; 
             result.style.color = 'red'; 
         } 
-        else{ 
+        else if(playerScore === computerScore){ 
             result.style.fontSize = '2rem'; 
             result.innerText = 'Tie'; 
             result.style.color = 'grey'
@@ -126,7 +126,6 @@ const game = () => {
     } 
   
     const battleMusic = document.querySelector(".battleMusic");
-    const victoryMusic = document.querySelector(".victoryMusic");
     const pauseMusic = document.querySelector(".battleMusicBtn")
   
     window.addEventListener("DOMContentLoaded", () => {
@@ -139,9 +138,10 @@ const game = () => {
           battleMusic.volume = 0.09;
           battleMusic.play();
           
-        } else {
+        } else if (battleMusic.play){
           battleMusic.pause();
         }
+
       });
 
     // Calling playGame function inside game 
