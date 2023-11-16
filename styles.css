@@ -55,17 +55,12 @@ body{
     background-color: darkred;
 }
 
-.p-count {
-    color: black;
-    font-size: 55px;
-}
-
 .playerscore {
     border: 10px soild black;
     border-radius: 5px;
 }
   
-/* Score  */
+/* styles for the score number  */
 .p-count,.c-count{ 
     text-align: center; 
     margin-top: 15px; 
@@ -73,6 +68,7 @@ body{
     font-size: 55px;
 } 
 
+/* centers move and movesleft classes and adjusts font */
 .move{ 
     display: flex; 
     justify-content: space-evenly;
@@ -85,7 +81,7 @@ body{
     font-size: 20px; 
 } 
 
-/* displaying three buttons in one line */
+/* displaying three option buttons in one line */
 .options{ 
     display: flex; 
     width: 50vw; 
@@ -95,7 +91,7 @@ body{
 
 
 
-/* Styling on all three buttons */
+/* Styling on all three option buttons */
 .grass { 
     padding: 10px; 
     width: 100px; 
@@ -131,8 +127,10 @@ body{
     justify-content: space-evenly;
 } 
 
+/* results style */
 .result{ 
     margin-top: 20px; 
+    margin-bottom: 20px;
     display: flex; 
     justify-content: space-evenly;
     font-size: 20px; 
