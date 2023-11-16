@@ -41,12 +41,15 @@ const game = () => {
     const winner = (player,computer) => { 
         const result = document.querySelector('.result'); 
         const playerScoreBoard = document.querySelector('.p-count'); 
-        const computerScoreBoard = document.querySelector('.c-count'); 
+        const computerScoreBoard = document.querySelector('.c-count');
+
+        // changes player and cpu string to lower case to make values valid
         player = player.toLowerCase(); 
         computer = computer.toLowerCase(); 
+        //checks if players choice and cpu's choice are the same
         if(player === computer){ 
             result.textContent = `You both chose the same type...that's awkward`
-        } 
+        } // checks if player chose grass and if cpu's options were fire or water and updates score accordingly if player won or not
         else if(player == 'grass'){ 
             if(computer == 'fire'){ 
                 result.textContent = `Computer's Fire Type beat your Grass Type... you suck`; 
@@ -133,13 +136,14 @@ const game = () => {
     const pauseMusic = document.querySelector(".battleMusicBtn")
   
     window.addEventListener("DOMContentLoaded", () => {
-        battleMusic.volume = 0.09;
+        battleMusic.volume = 0.08;
         battleMusic.play()
+        battleMusic.loop = true
       });
     
     pauseMusic.addEventListener("click", () => {
         if (battleMusic.paused) {
-          battleMusic.volume = 0.09;
+          battleMusic.volume = 0.08;
           battleMusic.play();
           
         } else if (battleMusic.play){
