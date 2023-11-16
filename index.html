@@ -9,25 +9,32 @@
 <body>
 
     <div class="container">
+      <!-- pause and play button for music -->
       <button class="battleMusicBtn">Play/Pause Music</button>
+      <!-- music -->
       <audio class="battleMusic" src="Battle.mp3"></audio>
       <audio class="victoryMusic" src="Victory.mp3"></audio>
       <audio class="tieMusic" src="record scratch.mp3"></audio>
       <audio class="loseMusic" src="fail sound.mp3"></audio>
+      <!-- title -->
         <div class="title">Type Battle</div>
+        <!-- div for player score -->
         <div class="score1">   
           <div class="playerScore"> 
               <h2 class="trainer">Your Trainer</h2> 
               <p class="p-count count">0</p> 
-
           </div>    
-        </div>   
+        </div>
+        <!-- Round result -->
+        <div class="result"></div>    
+        <!-- div for cpu score -->
         <div class="score2">     
           <div class="computerScore"> 
               <h2 class="cpu">Enemy Trainer</h2> 
               <p class="c-count count">0</p> 
           </div> 
-        </div>     
+        </div> 
+      <!-- options menu container -->
       <div class="optionsMenu">
         <div class="move">Choose your type!</div> 
           
@@ -39,12 +46,9 @@
             <button class="grass">Grass</button> 
             <button class="fire">Fire</button> 
             <button class="water">Water</button>     
-        </div> 
+        </div>
           
-          <!--Final result -->
-        <div class="result"></div> 
-          
-          <!-- restart -->
+          <!-- restart button -->
         <button class="restart"></button> 
       </div>
     </div>
