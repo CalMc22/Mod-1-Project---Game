@@ -112,21 +112,21 @@ const game = () => {
         if(playerScore > computerScore){ 
             result.style.fontSize = '2rem'; 
             result.innerText = 'You Won The Game';
-            result.style.color = 'skyblue';
+            result.style.color = 'navy';
             victorySfx.volume = 0.2;
             victorySfx.play();
         } 
         else if(playerScore < computerScore){ 
             result.style.fontSize = '2rem'; 
             result.innerText = 'You Lost The Game'; 
-            result.style.color = 'red'; 
+            result.style.color = 'darkred'; 
             loseSfx.volume = 0.2;
             loseSfx.play();
         } 
         else if(playerScore === computerScore){ 
             result.style.fontSize = '2rem'; 
-            result.innerText = 'Tie'; 
-            result.style.color = 'grey'
+            result.innerText = 'tie'; 
+            result.style.color = 'white'
             tieSfx.volume = 0.2;
             tieSfx.play();
         } 
