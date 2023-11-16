@@ -127,6 +127,8 @@ const game = () => {
             result.style.fontSize = '2rem'; 
             result.innerText = 'Tie'; 
             result.style.color = 'grey'
+            tieSfx.volume = 0.2;
+            tieSfx.play();
         } 
         restartBtn.innerText = 'Restart'; 
         restartBtn.style.display = 'flex'

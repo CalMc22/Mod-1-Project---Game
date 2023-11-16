@@ -22,34 +22,55 @@ body{
 .title{ 
     position: absolute;
     top: 0;
+    margin-bottom: 20px;
     font-size: 70px; 
     z-index: 2; 
 } 
   
 
 /* Score Board */
-.score{ 
+.score { 
     display: flex; 
-    width: 50vh; 
+    width: 50vh;
+    height: 50vh;
     justify-content: space-evenly; 
     position: absolute;  
-    z-index: 1; 
+    z-index: 1;
 } 
 
+
+.trainer, .cpu {
+    border: 3px solid black;
+    border-radius: 10px;
+    background-color: blue;
+    color: white;
+    padding: 10px
+}
+
 .trainer {
-    margin-top: 0px;
+    margin-top: 150px;
+}
+
+.cpu{
+    background-color: darkred;
+}
+
+.p-count {
+    color: black;
+    font-size: 55px;
 }
 
 .playerscore {
-   border-radius: 5px;
-
+    border: 10px soild black;
+    border-radius: 5px;
 }
   
 /* Score  */
 .p-count,.c-count{ 
     text-align: center; 
-    font-size: 40px; 
     margin-top: 15px; 
+    color: black;
+    font-size: 55px;
 } 
   
 /* displaying three buttons in one line */
@@ -104,6 +125,6 @@ body{
 }
 
 .battleField {
-    margin-bottom: 100px;
+    margin-bottom: 0px;
     
 }
