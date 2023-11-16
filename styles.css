@@ -24,6 +24,10 @@ body{
     font-size: 70px; 
 } 
 
+canvas {
+    display: none;
+    border: 2px solid black;
+}
 
 /* styles for your trainer and cpu trainer */
 .trainer, .cpu {
