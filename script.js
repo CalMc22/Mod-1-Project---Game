@@ -94,6 +94,7 @@ const game = () => {
         const result = document.querySelector('.result'); 
         const restartBtn = document.querySelector('.restart');
         const victorySong = document.querySelector('.victoryMusic')
+        const loseSound=
   
         playerOptions.forEach(option => { 
             option.style.display = 'none'; 
@@ -137,7 +138,7 @@ const game = () => {
   
     window.addEventListener("DOMContentLoaded", () => {
         battleMusic.volume = 0.08;
-        battleMusic.play()
+        // battleMusic.play()
         battleMusic.loop = true
       });
     
