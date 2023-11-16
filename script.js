@@ -93,8 +93,9 @@ const game = () => {
         const chooseMove = document.querySelector('.move'); 
         const result = document.querySelector('.result'); 
         const restartBtn = document.querySelector('.restart');
-        const victorySong = document.querySelector('.victoryMusic')
-        const loseSound=
+        const victorySfx = document.querySelector('.victoryMusic')
+        const loseSfx = document.querySelector('.loseMusic')
+        const tieSfx = document.querySelector('.tieMusic')
   
         playerOptions.forEach(option => { 
             option.style.display = 'none'; 
@@ -112,13 +113,15 @@ const game = () => {
             result.style.fontSize = '2rem'; 
             result.innerText = 'You Won The Game';
             result.style.color = 'skyblue';
-            victorySong.volume = 0.2;
-            victorySong.play();
+            victorySfx.volume = 0.2;
+            victorySfx.play();
         } 
         else if(playerScore < computerScore){ 
             result.style.fontSize = '2rem'; 
             result.innerText = 'You Lost The Game'; 
             result.style.color = 'red'; 
+            loseSfx.volume = 0.2;
+            loseSfx.play();
         } 
         else if(playerScore === computerScore){ 
             result.style.fontSize = '2rem'; 
