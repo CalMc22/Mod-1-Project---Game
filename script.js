@@ -49,34 +49,34 @@ const game = () => {
         } 
         else if(player == 'grass'){ 
             if(computer == 'fire'){ 
-                result.textContent = `Computer's fire type beat your grass type... you suck`; 
+                result.textContent = `Computer's Fire Type beat your Grass Type... you suck`; 
                 computerScore++; 
                 computerScoreBoard.textContent = computerScore; 
   
             }else if (computer == 'water'){ 
-                result.textContent = 'Player Won'
+                result.textContent = 'Yep, Grass beats Water. You won this move!'
                 playerScore++; 
                 playerScoreBoard.textContent = playerScore; 
             } 
         } 
         else if(player == 'water'){ 
             if(computer == 'grass'){ 
-                result.textContent = `Computer's grass type beat your water type... you suck`; 
+                result.textContent = `Computer's Grass Type beat your Water Type... you suck`; 
                 computerScore++; 
                 computerScoreBoard.textContent = computerScore; 
             }else if (computer == 'fire'){ 
-                result.textContent = 'Player Won'; 
+                result.textContent = 'Yep, Water beats Fire. You won this move!'; 
                 playerScore++; 
                 playerScoreBoard.textContent = playerScore; 
             } 
         } 
         else if(player == 'fire'){ 
             if(computer == 'water'){ 
-                result.textContent = `Computer's water type beat your fire type... you suck`; 
+                result.textContent = `Computer's Water Type beat your Fire Type... you suck`; 
                 computerScore++; 
                 computerScoreBoard.textContent = computerScore; 
             }else if (computer == 'grass'){ 
-                result.textContent = 'Player Won'; 
+                result.textContent = 'Yep, Fire beats Grass. You won this move!'; 
                 playerScore++; 
                 playerScoreBoard.textContent = playerScore; 
             } 
@@ -96,6 +96,11 @@ const game = () => {
             option.style.display = 'none'; 
         }) 
 
+        // pauses battle music and removes the button on gave over
+        battleMusic.pause()
+        pauseMusic.remove()
+
+
         chooseMove.innerText = 'Game Over!!'
         movesLeft.style.display = 'none'; 
   
@@ -105,7 +110,6 @@ const game = () => {
             result.style.color = 'skyblue';
             victorySong.volume = 0.2;
             victorySong.play();
-            
         } 
         else if(playerScore < computerScore){ 
             result.style.fontSize = '2rem'; 
