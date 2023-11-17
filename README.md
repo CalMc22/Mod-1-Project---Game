@@ -43,6 +43,7 @@ https://calmc22.github.io/Type-Battles/
 ## Known Bugs
 
 * Doesn't visually look well on mobile
+* Victory Sound doesn't play on the Github Pages site
 
 ## Liscense
 
