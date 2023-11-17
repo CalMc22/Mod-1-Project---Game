@@ -39,6 +39,7 @@ https://calmc22.github.io/Type-Battles/
 * Customize name
 * Add a battlefield that displays a pokemon with the same type you choose
 * Add battle animations
+* Interactive announcer Sfx (similar to Pokemon Statium announcer)
 
 ## Known Bugs
 
