@@ -1,13 +1,18 @@
 body{
     margin: 0;
+    height: 100%;
 }
 
 .container{ 
     padding: 0; 
     margin: 0; 
     box-sizing: border-box;
-    background: rgb(0,155,255);
-    background: radial-gradient(circle, rgba(0,155,255,1) 0%, rgba(0,155,255,1) 59%, rgba(80,222,255,1) 78%, rgba(0,0,0,1) 100%);
+    /* background: rgb(0,155,255);
+    background: radial-gradient(circle, rgba(0,155,255,1) 0%, rgba(0,155,255,1) 59%, rgba(80,222,255,1) 78%, rgba(0,0,0,1) 100%); */
+    background-image: url('pokemon battle.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
     color: #fff; 
     display: flex; 
     flex-direction: column; 
@@ -15,6 +20,7 @@ body{
     width: 100vw; 
     justify-content: center; 
     align-items: center; 
+
 } 
 
 /* Title of the game */
@@ -24,9 +30,14 @@ body{
     font-size: 70px; 
 } 
 
-canvas {
-    display: none;
+.scores{
     border: 2px solid black;
+    display: flex; 
+    width: 50vw; 
+    justify-content: space-evenly; 
+    margin-top: 40px; 
+    border-radius: 10px;
+    padding: 20px;
 }
 
 /* styles for your trainer and cpu trainer */
@@ -38,7 +49,6 @@ canvas {
 }
 
 .trainer {
-    margin-top: 120px;
     background-color: navy
 }
 
@@ -66,6 +76,13 @@ canvas {
     justify-content: space-evenly;
     font-size: 20px; 
 } 
+
+.optionsMenu {
+    border: 2px solid black;
+    border-radius: 10px;
+    padding: 20px;
+
+}
 
 /* displaying three option buttons in one line */
 .options{ 
