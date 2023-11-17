@@ -24,8 +24,11 @@ https://calmc22.github.io/Type-Battles/
 ## Assets
 
 Pokemon: Red/Blue/Yellow - Trainer Battle Music 
+
 Pokemon: Red/Blue/Yellow - Trainer Battle Victory Music
+
 DJ Record Scratch SFX - https://www.youtube.com/watch?v=r5vd5cE3n0M&ab_channel=MUSIC%26SOUNDEFFECTS
+
 Fail SFX - https://www.youtube.com/watch?v=b3FJgIZVW4g&ab_channel=SoundEffects
 
 ## Future Ideas
