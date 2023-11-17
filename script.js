@@ -16,17 +16,18 @@ const game = () => {
         // Function to start playing game 
         playerOptions.forEach(option => { 
             option.addEventListener('click',function(){ 
-  
+                // declares variable for movesLeft
                 const movesLeft = document.querySelector('.movesleft'); 
+                // decrements moves variable by 1
                 moves--; 
+                // sets movesLeft text to Moves Left:(the amount of moves left)
                 movesLeft.innerText = `Moves Left: ${moves}`; 
                   
                 // will get number from 0 to 2 and set it to choiceNumber variable
                 const choiceNumber = Math.floor(Math.random()*3); 
                 // will assign computerChoice to computerOption array and get the string from the array based on what number is randomly chosen
                 const computerChoice = computerOptions[choiceNumber]; 
-                console.log(choiceNumber)
-                // Function to check who wins 
+                // Function with the string of playerOptions and computerChoice as the arguments
                 winner(this.innerText,computerChoice) 
                   
                 // Calling gameOver function after 6 moves 
@@ -44,7 +45,7 @@ const game = () => {
         const playerScoreBoard = document.querySelector('.p-count'); 
         const computerScoreBoard = document.querySelector('.c-count');
 
-        // changes player and cpu string to lower case to make values valid
+        // changes player and cpu option string to lower case to make values valid
         player = player.toLowerCase(); 
         computer = computer.toLowerCase(); 
         //checks if players choice and cpu's choice are the same
