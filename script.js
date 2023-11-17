@@ -145,7 +145,7 @@ const game = () => {
   
     window.addEventListener("DOMContentLoaded", () => {
         battleMusic.volume = 0.08;
-        // battleMusic.play()
+        battleMusic.play()
         battleMusic.loop = true
       });
     
