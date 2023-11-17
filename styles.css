@@ -34,7 +34,8 @@ body{
 .scores{
     border: 10px solid black;
     border-radius: 10px;
-    background-color: lightblue;
+    background: rgb(163,231,255);
+    background: linear-gradient(135deg, rgba(163,231,255,1) 0%, rgba(193,201,255,1) 50%, rgba(255,255,255,1) 100%);
     display: flex; 
     width: 50vw; 
     justify-content: space-evenly; 
@@ -88,7 +89,8 @@ body{
     border: 10px solid black;
     border-radius: 10px;
     padding: 20px;
-    background-color: tan;
+    background: rgb(255,221,163);
+    background: linear-gradient(135deg, rgba(255,221,163,1) 0%, rgba(255,232,193,1) 50%, rgba(255,255,255,1) 100%);
     color: black;
 }
 
@@ -108,6 +110,7 @@ body{
     width: 100px; 
     border-radius: 10px; 
     background: green; 
+    font-size: 20px;
 } 
 
 .fire {
@@ -115,6 +118,7 @@ body{
     width: 100px; 
     border-radius: 10px; 
     background: orangered; 
+    font-size: 20px;
 } 
 
 .water {
@@ -122,6 +126,7 @@ body{
     width: 100px; 
     border-radius: 10px; 
     background: lightskyblue; 
+    font-size: 20px;
 }
 
   
@@ -136,12 +141,14 @@ body{
     border-radius: 10px;
     margin-top: 20px; 
     justify-content: space-evenly;
+    font-size: 20px;
 } 
 
 /* results style */
 .result{ 
     margin-top: 20px; 
     margin-bottom: 20px;
+    border-radius: 10px;
     color: black;
     display: flex; 
     justify-content: space-evenly;
