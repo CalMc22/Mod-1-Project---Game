@@ -2,7 +2,7 @@
 const game = () => { 
     let playerScore = 0; 
     let computerScore = 0; 
-    let moves = 0; 
+    let moves = 6; 
   
   
     // Function to  
@@ -18,18 +18,19 @@ const game = () => {
             option.addEventListener('click',function(){ 
   
                 const movesLeft = document.querySelector('.movesleft'); 
-                moves++; 
-                movesLeft.innerText = `Moves Left: ${6-moves}`; 
+                moves--; 
+                movesLeft.innerText = `Moves Left: ${moves}`; 
                   
-  
+                // will get number from 0 to 2 and set it to choiceNumber variable
                 const choiceNumber = Math.floor(Math.random()*3); 
+                // will assign computerChoice to computerOption array and get the string from the array based on what number is randomly chosen
                 const computerChoice = computerOptions[choiceNumber]; 
-  
+                console.log(choiceNumber)
                 // Function to check who wins 
                 winner(this.innerText,computerChoice) 
                   
                 // Calling gameOver function after 6 moves 
-                if(moves == 6){ 
+                if(moves == 0){ 
                     gameOver(playerOptions,movesLeft); 
                 } 
             }) 
@@ -111,21 +112,21 @@ const game = () => {
   
         if(playerScore > computerScore){ 
             result.style.fontSize = '2rem'; 
-            result.innerText = 'You Won The Game';
+            result.innerText = 'You Won The Battle!';
             result.style.color = 'navy';
             victorySfx.volume = 0.2;
             victorySfx.play();
         } 
         else if(playerScore < computerScore){ 
             result.style.fontSize = '2rem'; 
-            result.innerText = 'You Lost The Game'; 
+            result.innerText = 'You Lost The Battle :('; 
             result.style.color = 'darkred'; 
             loseSfx.volume = 0.2;
             loseSfx.play();
         } 
         else if(playerScore === computerScore){ 
             result.style.fontSize = '2rem'; 
-            result.innerText = 'The score is tied...thats embarresing'; 
+            result.innerText = 'The score is tied...try again'; 
             result.style.color = 'black'
             tieSfx.volume = 0.2;
             tieSfx.play();

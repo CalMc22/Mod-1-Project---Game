@@ -13,7 +13,7 @@ body{
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    color: #fff; 
+    color: black;
     display: flex; 
     flex-direction: column; 
     height: 100vh; 
@@ -25,9 +25,17 @@ body{
 
 /* Title of the game */
 .title{ 
-    position: absolute;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
     top: 0;
+    width: 600px;
     font-size: 70px; 
+    border: 10px solid black;
+    border-radius: 10px;
+    background: rgb(163,231,255);
+    background: linear-gradient(135deg, rgba(163,231,255,1) 0%, rgba(193,201,255,1) 50%, rgba(255,255,255,1) 100%);
+    padding: 15px;
 } 
 
 /* sets border, background color, and positioning for scores */
@@ -67,7 +75,6 @@ body{
 .p-count,.c-count{ 
     text-align: center; 
     margin-top: 15px; 
-    color: black;
     font-size: 55px;
 } 
 
@@ -91,7 +98,6 @@ body{
     padding: 20px;
     background: rgb(255,221,163);
     background: linear-gradient(135deg, rgba(255,221,163,1) 0%, rgba(255,232,193,1) 50%, rgba(255,255,255,1) 100%);
-    color: black;
 }
 
 /* displaying three option buttons in one line */
@@ -130,8 +136,6 @@ body{
 }
 
   
-
-  
 /* Reload button style */
 .restart { 
     display: none; 
@@ -149,7 +153,6 @@ body{
     margin-top: 20px; 
     margin-bottom: 20px;
     border-radius: 10px;
-    color: black;
     display: flex; 
     justify-content: space-evenly;
     font-size: 20px; 
