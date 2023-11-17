@@ -143,11 +143,11 @@ const game = () => {
     const battleMusic = document.querySelector(".battleMusic");
     const pauseMusic = document.querySelector(".battleMusicBtn")
   
-    window.onload = () => {
+    window.addEventListener("DOMContentLoaded", () => {
         battleMusic.volume = 0.08;
         battleMusic.play()
         battleMusic.loop = true
-      };
+      });
     
     pauseMusic.addEventListener("click", () => {
         if (battleMusic.paused) {
