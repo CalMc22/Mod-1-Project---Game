@@ -43,7 +43,8 @@ https://calmc22.github.io/Type-Battles/
 ## Known Bugs
 
 * Doesn't visually look well on mobile
-* Battle Music doesn't play on inital startup
+* Battle Music doesn't play on inital startup (fixed?)
+* Victory Music not working in GitHubPages (fixed?)
 
 ## Liscense
 
