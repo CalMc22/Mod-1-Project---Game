@@ -125,8 +125,8 @@ const game = () => {
         } 
         else if(playerScore === computerScore){ 
             result.style.fontSize = '2rem'; 
-            result.innerText = 'tie'; 
-            result.style.color = 'white'
+            result.innerText = 'The score is tied...thats embarresing'; 
+            result.style.color = 'black'
             tieSfx.volume = 0.2;
             tieSfx.play();
         } 
